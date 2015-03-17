@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    title Signin Template for Bootstrap
+    
+    link(rel="icon", href="../../favicon.ico")
+    link(href="../../dist/css/bootstrap.min.css", rel="stylesheet")
+    link(href="signin.css", rel="stylesheet")
+    
+    script(src="../../assets/js/ie-emulation-modes-warning.js")
+    script(src="../../assets/js/ie10-viewport-bug-workaround.js")
+
+  body
+    .container
+      form.form-signin(action="/form", method="POST")
+        h2.form-signin-heading Please sign in
+        
+        label.sr-only(for="email") Email address
+        input#inputEmail.form-control(name="email", type="email", placeholder="Email address", required="", autofocus="")
+        
+        label.sr-only(for="password") Password
+        input#inputPassword.form-control(name="password", type="password", placeholder="Password", required="")
+        .checkbox
+          label
+            input(type="checkbox", value="remember-me")
+            | Remember me
+        button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in
+
+
